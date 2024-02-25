@@ -87,6 +87,7 @@ class DBStorage:
         """Counts the number of objects in database (matching a given class
         if given any.)"""
         count = 0
+
         if (cls is not None):
             query_obj = str(cls.__name__)
             instances = self.__session.query(cls).all()

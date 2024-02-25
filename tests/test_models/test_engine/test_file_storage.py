@@ -145,6 +145,7 @@ class TestFileStorage(unittest.TestCase):
         all_objs_2 = storage.all()
         state_count = storage.count(State)
         count = 0
+
         for obj_key in list(all_objs_2):
             if (all_objs_2[obj_key].__class__ == State):
                 count += 1

@@ -80,6 +80,7 @@ class FileStorage:
         """Counts the number of objects in storage (matching a given class
         if given any.)"""
         count = 0
+
         if cls is not None:
             for key in self.__objects:
                 val = self.__objects[key].__class__
