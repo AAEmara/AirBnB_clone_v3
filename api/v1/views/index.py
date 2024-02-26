@@ -15,11 +15,13 @@ from models.user import User
 classes = {"amenities": Amenity, "cities": City,
            "places": Place, "reviews": Review, "states": State, "users": User}
 
+
 @app_views.route("/status")
 def status():
     """Returns status in JSON."""
     status_dict = {"status": "OK"}
     return (jsonify(status_dict))
+
 
 @app_views.route("/stats")
 def objs_count():
