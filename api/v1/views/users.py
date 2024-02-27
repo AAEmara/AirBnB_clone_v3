@@ -54,8 +54,7 @@ def add_users():
         return ("Missing email", 400)
     elif ("password" not in list(request.get_json())):
         return ("Missing password", 400)
-    user_name = request.get_json()["name"]
-    user_obj = User(name=user_name, email=email, password=password)
+    user_obj = User(email=email, password=password)
     storage.new(user_obj)
     user_dict = user_obj.to_dict()
     storage.save()
